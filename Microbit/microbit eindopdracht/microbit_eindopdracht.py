@@ -13,5 +13,5 @@ shapes=[Image("00900:09090:99099:99999:00000"), #Driehoek
 
 while True:
     gesture = accelerometer.current_gesture() # zet de variable gesture naar de huidige gesture huidige gesture
-    if gesture == "shake":                    # zorgt ervoor dat je de microbit kan schudden
+    if gesture == "Shake":                    # zorgt ervoor dat je de microbit kan schudden
         display.show(random.choice(shapes))   # laat een random shape zien
