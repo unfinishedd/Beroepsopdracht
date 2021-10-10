@@ -18,7 +18,7 @@ def intro():
     \n Kabul is niet het beste plek om te leven maar sinds hij met zijn ouders wil blijven, is hij nog bij zijn ouders. 
     """
     for char in text:
-        sleep(0.015)
+        sleep(0.00000001)
         sys.stdout.write(char)
         sys.stdout.flush()
     sleep(1)
@@ -340,8 +340,11 @@ def part11():
             awnser = input("> ")
 def part12():
     text = """\n
-    Hij gaat met ze mee en het blijken erg aardige mensen te zijn en het blijkt dat ze uit dezelfde wijk als jou zijn. \n Maar onderweg zie je veel politie en later na nog wat doorrijden op de snelweg zie je militaire support wat je erg verdacht vind. 
-    \n Onderweg worden jullie gestopt door de politie en je vraagt je af waarom sinds je met mensen zit de je niet kent en je altijd goed gedraagt en geen strafblad hebt. \n Maar ze vragen of we iemand hebben gezien en zeggen vervolgens Mo’s officiële volledige naam. \n Mo voelt zijn hart zinken en weet niet wat hij moet doen. 
+    Hij gaat met ze mee en het blijken erg aardige mensen te zijn en het blijkt dat ze uit dezelfde wijk als jou zijn.
+    \n Maar onderweg zie je veel politie en later na nog wat doorrijden op de snelweg zie je militaire support wat je erg verdacht vind. 
+    \n Onderweg worden jullie gestopt door de politie en je vraagt je af waarom sinds je met mensen zit de je niet kent en je altijd goed gedraagt en geen strafblad hebt.
+    \n Maar ze vragen of we iemand hebben gezien en zeggen vervolgens Mo’s officiële volledige naam.
+    \n Mo voelt zijn hart zinken en weet niet wat hij moet doen. 
     \n Zal Mo zeggen dat hij “die” Mo is of zal hij doen alsof hij niet weet wie dat is?
 
     """
@@ -359,11 +362,11 @@ def part12():
     while incorrect == True:
         if awnser == "a":
             sleep(1)
-            part20()
+            end1()
             incorrect = False
         elif awnser == "b":
             sleep(1)
-            part21()
+            end5()
             incorrect = False
         else:
             print("Please pick either 'a' or 'b'")
@@ -427,7 +430,8 @@ Hij besloot langzamer te lopen en ondanks het langzamer lopen gaat hij weer door
             awnser = input("> ")
 def part15():
     text = """\n
-    Je loopt naar haar toe en probeert haar nummer te vragen en sinds ze een fan is van je politieke meningen geeft ze je haar nummer en \n loopt ze met je door. 
+    Je loopt naar haar toe en probeert haar nummer te vragen en sinds ze een fan is van je politieke meningen geeft ze je haar nummer en
+    \n loopt ze met je door. 
     \n Wil je met haar even ergens gaan eten of wil je zelf alleen doorgaan? 
     """
     for char in text:
@@ -752,5 +756,38 @@ def end4():
             print("                                      Please pick either 'Yes' or 'No'")
             awnser = input("> ")
 
+def end5():
+    text = """\n
+    Je besloot te liegen en daarmee bracht je je leven in gevaar met ook nog het leven van de andere. \n Hij werd de eerste transexuele man die het overleefde om te vluchten naar rusland. 
+    \n 
+    """
+    for char in text:
+        sleep(0.02)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    sleep(1)
+
+    incorrect = True
+    print("")
+    print("                                        Would you like to try again?")
+    print("""\
+                                     [Y]: Yes                 [N]: No
+        """)
+    awnser = input("> ")
+
+    while incorrect == True:
+        if awnser == "YES" or awnser == "yes" or awnser == "Yes" or awnser == "Y" or awnser == "y":
+            sleep(1)
+            os.system("cls")
+            part1()
+            incorrect = False
+        elif awnser == "NO" or awnser == "no" or awnser == "No" or awnser == "N" or awnser == "n":
+            sleep(1)
+            os.system("cls")
+            incorrect = False
+        else:
+            sleep(0.5)
+            print("                                      Please pick either 'Yes' or 'No'")
+            awnser = input("> ")
 
 intro()
